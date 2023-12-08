@@ -7,13 +7,35 @@ const CourseList = () => {
     return (
         <div className={styles.wrapper}>
             <Card className={styles.card}
-                  title='Информационная безопасность'
                   hoverable
                   cover={<img src="/img.png" alt="lflf"/>}
             >
-                <Card.Meta title="Europe Street beat" description="www.instagram.com" />
+                <Card.Meta title="Продвинутый тест по информационной безопасности" description="HTTP и HTTPS методы работы и разница между ними " />
             </Card>
-            <Card className={styles.card}>Привет мирфвфывфывфывфывфывфывфыв</Card><Card className={styles.card}>Привет мирфвфывфывфывфывфывфывфыв</Card><Card className={styles.card}>Привет мирфвфывфывфывфывфывфывфыв</Card><Card className={styles.card}>Привет мирфвфывфывфывфывфывфывфыв</Card><Card className={styles.card}>Привет мирфвфывфывфывфывфывфывфыв</Card><Card className={styles.card}>Привет мирфвфывфывфывфывфывфывфыв</Card><Card className={styles.card}>Привет мирфвфывфывфывфывфывфывфыв</Card><Card className={styles.card}>Привет мирфвфывфывфывфывфывфывфыв</Card>
+            <Card className={styles.card}
+                  hoverable
+                  cover={<img src="/img.png" alt="lflf"/>}
+            >
+                <Card.Meta title="Продвинутый тест по информационной безопасности" description="HTTP и HTTPS методы работы и разница между ними " />
+            </Card>
+            <Card className={styles.card}
+                  hoverable
+                  cover={<img src="/img.png" alt="lflf"/>}
+            >
+                <Card.Meta title="Продвинутый тест по информационной безопасности" description="HTTP и HTTPS методы работы и разница между ними " />
+            </Card>
+            <Card className={styles.card}
+                  hoverable
+                  cover={<img src="/img.png" alt="lflf"/>}
+            >
+                <Card.Meta title="Продвинутый тест по информационной безопасности" description="HTTP и HTTPS методы работы и разница между ними " />
+            </Card>
+            <Card className={styles.card}
+                  hoverable
+                  cover={<img src="/img.png" alt="lflf"/>}
+            >
+                <Card.Meta title="Продвинутый тест по информационной безопасности" description="HTTP и HTTPS методы работы и разница между ними " />
+            </Card>
         </div>
     );
 };

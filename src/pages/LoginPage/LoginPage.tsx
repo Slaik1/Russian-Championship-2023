@@ -4,7 +4,7 @@ import Login from '../../components/Login/Login';
 
 const LoginPage: FC = () => {
 	return (
-		<Login />
+		<Login/>
 	)
 }
 

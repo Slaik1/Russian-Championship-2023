@@ -24,32 +24,31 @@ const AsidePanel = () => {
     }
 
     const items: MenuItem[] = [
-        getItem('Navigation One', 'sub1', <MailOutlined />, [
-            getItem('Option 1', '1'),
-            getItem('Option 2', '2'),
-            getItem('Option 3', '3'),
-            getItem('Option 4', '4'),
+        getItem('Курс 1', 'sub1', <AppstoreOutlined />, [
+            getItem('Урок 1', '1'),
+            getItem('Урок 2', '2'),
+            getItem('Урок 3', '3'),
+            getItem('Урок 4', '4'),
         ]),
 
-        getItem('Navigation Two', 'sub2', <AppstoreOutlined />, [
-            getItem('Option 5', '5'),
-            getItem('Option 6', '6'),
-            getItem('Submenu', 'sub3', null, [getItem('Option 7', '7'), getItem('Option 8', '8')]),
+        getItem('Курс 2', 'sub2', <AppstoreOutlined />, [
+            getItem('Урок 5', '5'),
+            getItem('Урок 6', '6'),
+            getItem('Подурок', 'sub3', null, [getItem('Урок', '7'), getItem('Option 8', '8')]),
         ]),
 
-        getItem('Navigation Three', 'sub4', <SettingOutlined />, [
-            getItem('Option 9', '9'),
-            getItem('Option 10', '10'),
-            getItem('Option 11', '11'),
-            getItem('Option 12', '12'),
+        getItem('Курс 3', 'sub4', <AppstoreOutlined />, [
+            getItem('Урок 9', '9'),
+            getItem('Урок 10', '10'),
+            getItem('Урок 11', '11'),
+            getItem('Урок 12', '12'),
         ]),
     ];
-
 
     return (
         <div className={styles.wrapper}>
                     <Menu
-                        style={{width: 256}}
+                        style={{height: '100%'}}
                         defaultOpenKeys={['sub1']}
                         mode="inline"
                         items={items}

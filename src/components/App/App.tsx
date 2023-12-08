@@ -39,7 +39,6 @@ const App: FC = () => {
 
     return (
         <div className="App">
-            <Navigation/>
             <Routes>
                 <Route path="/" element={
                     <HomePage/>

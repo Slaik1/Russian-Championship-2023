@@ -1,16 +1,25 @@
-import { FC } from 'react';
+import {FC} from 'react';
 
-import  styles from './HomePage.module.scss'
+import styles from './HomePage.module.scss'
 import CourseList from "../../components/CourseList/CourseList";
 import AsidePanel from "../../components/AsidePanel/AsidePanel";
+import {Layout} from "antd";
+import Navigation from "../../components/Navigation/Navigation";
 
 const HomePage: FC = () => {
-	return (
-		<div className={styles.container}>
-			<AsidePanel/>
-			<CourseList/>
-		</div>
-	)
+    return (
+        <Layout>
+            <Layout.Header style={{padding: '0'}}><Navigation/></Layout.Header>
+            <Layout hasSider>
+                <Layout.Sider><AsidePanel/></Layout.Sider>
+                <Layout.Content>
+                    <div className={styles.container}>
+                        <CourseList/>
+                    </div>
+                </Layout.Content>
+            </Layout>
+        </Layout>
+    )
 }
 
 export default HomePage
