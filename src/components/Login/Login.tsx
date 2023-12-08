@@ -12,7 +12,7 @@ import AuthService from "../../api/AuthService";
 const Login: FC = () => {
     //const {checkAuth, signin} = useAuth();
 
-    const [login, setLogin] = useState('');
+    const [email, setLogin] = useState('');
     const [password, setPassword] = useState('');
     const [isNotValid, setIsNotValid] = useState(false);
     const [isAuthPending, setIsAuthPending] = useState(false);
@@ -42,7 +42,7 @@ const Login: FC = () => {
 
             //await checkAuth();
 
-            const res = await authService.login(login, password)
+            const res = await authService.login(email, password)
 
             console.log(res)
             notification.success({
@@ -82,21 +82,22 @@ const Login: FC = () => {
                 <h2 className={styles.title}>Авторизация</h2>
 
                 <Form.Item
-                    name="login"
-                    label="Логин"
+                    name="email"
                     help={isNotValid && helpDiv()}
                 >
                     <Input
                         autoFocus={true}
+                        placeholder="Почта"
                     />
                 </Form.Item>
 
                 <Form.Item
                     name="password"
-                    label="Пароль"
                     help={isNotValid && helpDiv()}
                 >
-                    <Input.Password/>
+                    <Input.Password
+                        placeholder="Пароль"
+                    />
                 </Form.Item>
 
                 <Form.Item className={styles.buttonWrapper}>

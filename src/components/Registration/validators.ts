@@ -1,9 +1,9 @@
 import {RuleObject} from "antd/lib/form";
 
-
-
 const rulesRegex = {
+    numbers: /^[0-9]*$/,// eslint-disable-line no-control-regex
     latinLetters: /^[\x00-\x7F]*$/,// eslint-disable-line no-control-regex
+    emails: /^[A-ZА-Я0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,// eslint-disable-line no-control-regex
 };
 
 const checkOccupied = async (login: string) => {
@@ -14,6 +14,14 @@ const checkOccupied = async (login: string) => {
 
         return false;
     }
+};
+
+export const ageValidator = async (_: RuleObject, value: string) => {
+    if (!value) throw new Error('Возраст обязателен');
+
+    if (parseInt(value) < 6) throw new Error('Для детей младше 6 лет обучающих программ нет');
+
+    if (!rulesRegex.numbers.test(value)) throw new Error('Используйте только цифры');
 };
 
 export const loginValidator = async (_: RuleObject, value: string) => {
@@ -28,6 +36,22 @@ export const loginValidator = async (_: RuleObject, value: string) => {
     const isOccupied = await checkOccupied(value);
 
     if (isOccupied) throw new Error('Логин занят');
+};
+
+export const emailValidator = async (_: RuleObject, value: string) => {
+    if (!value) throw new Error('Почта обязателена');
+
+    if (value.length < 4) throw new Error('Минимальная длина почты 4 символа');
+
+    if (value.length > 50) throw new Error('Максимальная длина почты 50 символов');
+
+    if (!rulesRegex.latinLetters.test(value)) throw new Error('Используйте только латинские буквы');
+
+    if (!rulesRegex.emails.test(value)) throw new Error('Используйте верный формат почты');
+
+    const isOccupied = await checkOccupied(value);
+
+    if (isOccupied) throw new Error('Почта занята');
 };
 
 export const passwordValidator = async (_: RuleObject, value: string) => {

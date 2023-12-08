@@ -5,7 +5,7 @@ import {Link, useNavigate} from "react-router-dom";
 
 import {debounce} from "../../helpers/debounce";
 
-import {DEBOUNCE_DELAY, LOGIN_RULES, PASSWORD_RULES, getConfirmPasswordRules} from "./constants";
+import {DEBOUNCE_DELAY, AGE_RULES, LOGIN_RULES, EMAIL_RULES, PASSWORD_RULES, getConfirmPasswordRules} from "./constants";
 
 import styles from './Registration.module.scss';
 
@@ -13,7 +13,9 @@ const Registration: FC = () => {
 
     //const {signin, checkAuth} = useAuth();
     const navigate = useNavigate();
+    const [age, setAge] = useState('');
     const [login, setLogin] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isFormLoading, setIsFormLoading] = useState(false);
 
@@ -42,8 +44,16 @@ const Registration: FC = () => {
         }
     }
 
+    const ageHandler = debounce(async (e: React.ChangeEvent<HTMLInputElement>) => {
+        setAge(e.target.value);
+    }, DEBOUNCE_DELAY)
+
     const loginHandler = debounce(async (e: React.ChangeEvent<HTMLInputElement>) => {
         setLogin(e.target.value);
+    }, DEBOUNCE_DELAY)
+
+    const emailHandler = debounce(async (e: React.ChangeEvent<HTMLInputElement>) => {
+        setEmail(e.target.value);
     }, DEBOUNCE_DELAY)
 
     const passwordHandler = debounce(async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -62,41 +72,68 @@ const Registration: FC = () => {
 
                 <Form.Item
                     required={false}
-                    label="Логин"
+                    name="age"
+                    rules={AGE_RULES}
+                    hasFeedback={true}
+                    validateDebounce={DEBOUNCE_DELAY}
+                >
+                    <Input
+                        autoFocus={true}
+                        placeholder="Возраст"
+                        onChange={(event) => ageHandler(event)}
+                    />
+                </Form.Item>
+
+                <Form.Item
+                    required={false}
                     name="login"
                     rules={LOGIN_RULES}
                     hasFeedback={true}
                     validateDebounce={DEBOUNCE_DELAY}
                 >
                     <Input
-                        autoFocus={true}
+                        placeholder="Логин"
                         onChange={(event) => loginHandler(event)}
                     />
                 </Form.Item>
 
                 <Form.Item
+                    required={false}
+                    name="email"
+                    rules={EMAIL_RULES}
+                    hasFeedback={true}
+                    validateDebounce={DEBOUNCE_DELAY}
+                >
+                    <Input
+                        placeholder="Почта"
+                        onChange={(event) => emailHandler(event)}
+                    />
+                </Form.Item>
+
+                <Form.Item
                     name="password"
-                    label="Пароль"
                     required={false}
                     rules={PASSWORD_RULES}
                     hasFeedback
                     validateDebounce={DEBOUNCE_DELAY}
                 >
                     <Input.Password
+                        placeholder="Пароль"
                         onChange={(event) => passwordHandler(event)}
                     />
                 </Form.Item>
 
                 <Form.Item
                     name="confirmPassword"
-                    label="Повторите пароль"
                     required={false}
                     dependencies={['password']}
+                    rules={getConfirmPasswordRules(password)}
                     hasFeedback
                     validateDebounce={DEBOUNCE_DELAY}
-                    rules={getConfirmPasswordRules(password)}
                 >
-                    <Input.Password/>
+                    <Input.Password
+                        placeholder="Повторите пароль"
+                    />
                 </Form.Item>
 
                 <Form.Item className={styles.buttonWrapper}>
