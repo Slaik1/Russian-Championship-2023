@@ -1,0 +1,41 @@
+@import './fonts.scss';
+
+
+:root {
+	--font-color: #FEFEFE;
+	--font-color-tint: #c5c5c5;
+	--font-color-dark: #000000E0;
+
+	--bg-light: #3F3F3F;
+	--bg-main: #2C2C2C;
+	--bg-transparent: #81818146;
+
+	--primary-color: #1677ff;
+	--error-color: #E13A2D;
+}
+
+#root {
+  display: flex;
+  font-family: 'Roboto';//, system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+}
+
+body {
+	color: var(--font-color);
+	//background: linear-gradient(90deg, rgba(72,0,84,1) 0%, rgba(0,67,80,1) 100%);
+}
+
+.App {
+	//background: rgba(0,0,0,0.5);
+	width: 100vw;
+	height: 100%;
+}
