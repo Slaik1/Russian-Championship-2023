@@ -7,7 +7,7 @@
 
 .form {
   width: 400px;
-  background: var(--bg-transparent);
+  background: var(--primary-transparent);
   padding: 35px;
   border-radius: 20px;
 
@@ -22,12 +22,12 @@
 
   .buttonWrapper {
 
-
     .btn {
       display: block;
       margin: auto;
       width: 100%;
       margin-top: 20px;
+      background: var(--additional-color);
     }
   }
 
@@ -36,6 +36,7 @@
     width: 100%;
     text-align: center;
     font-size: 14px;
+    color: var(--font-color);
   }
 }
 

@@ -8,11 +8,21 @@ const CURRENT_URL = BASE_URL+ ENDPOINTS.api
 
 
 export default class AuthService {
-    async login(login: string, password:string): Promise<any> {
-        const response = await axios.post(CURRENT_URL + '/login', {
+    async register(age: number, login: string, email: string, password:string): Promise<any> {
+        const response = await axios.post(CURRENT_URL + '/register', {
+            age: age,
             login: login,
-            password: password,
-            email:'test@mail.com'
+            email: email,
+            password: password
+        })
+
+        return response.data
+    }
+
+    async login(email: string, password:string): Promise<any> {
+        const response = await axios.post(CURRENT_URL + '/login', {
+            email: email,
+            password: password
         })
 
         return response.data
