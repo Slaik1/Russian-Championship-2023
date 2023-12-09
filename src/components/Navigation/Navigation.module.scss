@@ -3,16 +3,18 @@
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	background: #1677ff;
+	background: var(--additional-color);
 
 	a {
-		font-size: 22px;
-		font-weight: 600;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
 		text-transform: uppercase;
 		margin-bottom: 0;
 		margin-left: 30px;
 		text-decoration: none;
-		color: #fff;
+		color: var(--font-color);
 	}
 
 	.content {
@@ -27,9 +29,11 @@
 
 		.settings {
 			cursor: pointer;
-			font-size: 18px;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 600;
 			margin-right: 30px;
-			color: #fff;
+			color: var(--font-color);
 		}
 	}
 }
