@@ -22,7 +22,6 @@ const StatisticsPage:FC = () => {
                 </Layout.Content>
             </Layout>
         </Layout>
-
     );
 };
 

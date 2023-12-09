@@ -1,5 +1,4 @@
 .start {
-  font-family: 'Press Start 2P', sans-serif !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,9 +64,9 @@
       .slogan {
         color: var(--additional-color);;
         text-align: center;
-        font-size: 32px;
+        font-size: 24px;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 400;
         line-height: normal;
         margin-top: 30px;
         margin-bottom: 30px;
@@ -77,13 +76,13 @@
       .btn {
         display: block;
         margin: auto;
-        width: 400px;
+        width: 500px;
         height: 50px;
         margin-top: 25px;
         color: var(--font-color);
-        font-size: 24px;
+        font-size: 16px;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 400;
         line-height: normal;
         border-radius: 15px;
         background: var(--additional-color);
@@ -105,7 +104,7 @@
       .title {
         color: var(--additional-color);
         text-align: center;
-        font-size: 40px;
+        font-size: 32px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
@@ -116,7 +115,7 @@
       p {
         color: var(--additional-color);
         text-align: center;
-        font-size: 28px;
+        font-size: 20px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
@@ -140,8 +139,4 @@
       }
     }
   }
-}
-
-.helpDiv {
-  color: var(--error-color);
 }

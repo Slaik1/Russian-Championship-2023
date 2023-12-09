@@ -1,11 +1,11 @@
-import {Button, Form, Input, Modal, notification} from 'antd';
-import React, { FC, useState } from 'react';
+import {Button} from 'antd';
+import React, { FC } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import styles from './Start.module.scss'
 import Footer from "../Footer/Footer";
-import Settings from "../Settings/Settings";
 
 const Start: FC = () => {
+
     const navigate = useNavigate()
 
     return (
