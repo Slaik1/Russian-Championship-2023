@@ -17,8 +17,8 @@ export default class CourseService {
         return response.data
     }
 
-    async getAllTasks(): Promise<any> {
-        const response = await axios.get(CURRENT_URL + '/', {
+    async getTests(): Promise<any> {
+        const response = await axios.get(CURRENT_URL + '/get-all-tests', {
             headers: {
                 Authorization: `Bearer ${userStore.token}`
             }
