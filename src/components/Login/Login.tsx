@@ -1,5 +1,5 @@
 import { Button, Form, Input, notification } from 'antd';
-import { FC, useState } from 'react';
+import React, { FC, useState } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 
@@ -9,6 +9,7 @@ import styles from "./Login.module.scss"
 import AuthService from "../../api/AuthService";
 import {userStore} from "../../stores/userStore/userStore";
 import {observer} from "mobx-react-lite";
+import {AGE_RULES, DEBOUNCE_DELAY} from "../Registration/constants";
 
 const Login= () => {
 
@@ -66,15 +67,16 @@ const Login= () => {
                 onChange={(event) => handleFormChange(event)}
                 disabled={isAuthPending}
             >
-                <h2 className={styles.title}>Авторизация</h2>
+                <h2 className={styles.title}>Вход в аккаунт</h2>
 
                 <Form.Item
                     name="email"
                     help={isNotValid && helpDiv()}
                 >
                     <Input
+                        className={styles.loginFirstInput}
                         autoFocus={true}
-                        placeholder="Почта"
+                        placeholder="Электронная почта"
                     />
                 </Form.Item>
 
@@ -94,7 +96,7 @@ const Login= () => {
                 </Form.Item>
 
                 <Link className={styles.registerLink} to='/registration'>
-                    Зарегистрироваться
+                    Создать аккаунт
                 </Link>
             </Form>
         </div>

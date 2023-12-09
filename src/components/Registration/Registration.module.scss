@@ -6,18 +6,40 @@
 }
 
 .form {
-  width: 400px;
-  background: var(--primary-transparent);
-  padding: 35px;
-  border-radius: 20px;
-
-  label, .title {
-    color: var(--font-color) !important;
-  }
+  margin-top: 50px;
+  width: 500px;
+  font-size: 20px;
 
   .title {
-    font-size: 25px;
+    color: var(--additional-color) !important;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
     text-align: center;
+    margin-bottom: 50px;
+  }
+
+  span {
+    font-size: 20px;
+    border-radius: 15px;
+  }
+
+  input {
+    height: 40px;
+    border-radius: 15px;
+    color: #888;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    &::placeholder {
+      color: #A1A1A1;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
   }
 
   .buttonWrapper {
@@ -26,7 +48,14 @@
       display: block;
       margin: auto;
       width: 100%;
-      margin-top: 20px;
+      height: 50px;
+      margin-top: 25px;
+      color: var(--font-color);
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      border-radius: 15px;
       background: var(--additional-color);
     }
   }
@@ -34,9 +63,12 @@
   .registerLink {
     display: block;
     width: 100%;
+    color: var(--additional-color);
     text-align: center;
-    font-size: 14px;
-    color: var(--font-color);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
   }
 }
 

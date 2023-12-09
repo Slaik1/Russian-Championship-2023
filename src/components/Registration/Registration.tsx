@@ -78,6 +78,7 @@ const Registration: FC = () => {
                     validateDebounce={DEBOUNCE_DELAY}
                 >
                     <Input
+                        maxLength={3}
                         autoFocus={true}
                         placeholder="Возраст"
                         onChange={(event) => ageHandler(event)}
@@ -92,7 +93,7 @@ const Registration: FC = () => {
                     validateDebounce={DEBOUNCE_DELAY}
                 >
                     <Input
-                        placeholder="Логин"
+                        placeholder="Имя"
                         onChange={(event) => loginHandler(event)}
                     />
                 </Form.Item>
@@ -105,7 +106,7 @@ const Registration: FC = () => {
                     validateDebounce={DEBOUNCE_DELAY}
                 >
                     <Input
-                        placeholder="Почта"
+                        placeholder="Электронная почта"
                         onChange={(event) => emailHandler(event)}
                     />
                 </Form.Item>
@@ -138,7 +139,7 @@ const Registration: FC = () => {
 
                 <Form.Item className={styles.buttonWrapper}>
                     <Button className={styles.btn} type="primary" htmlType="submit" loading={isFormLoading}>
-                        Зарегистрироваться
+                        Создать аккаунт
                     </Button>
                 </Form.Item>
 
