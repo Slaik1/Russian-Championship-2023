@@ -1,4 +1,4 @@
-import { Button, Form, Input, notification } from 'antd';
+import { Button, Form, Input, Progress, Space, notification } from 'antd';
 import React, { FC, useState } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import styles from './Statistics.module.scss'
@@ -8,25 +8,50 @@ const Statistics: FC = () => {
 
     return (
         <div className={styles.statistics}>
-            <div className={styles.content}>
-                <div className={styles.image}>
-                    <img src="https://i.ibb.co/gtYCYL9/image.png" alt="image"/>
+            <div className={styles.progress}>
+            <div className={styles.progress_item}>
+                <div className={styles.progress1}>
+                <Progress type="dashboard" percent={35} />
                 </div>
-                <div className={styles.buttonWrapper}>
-                    <div className={styles.slogan}>
-                        Будущее безопасности начинается<br/>
-                        сегодня - курсы по кибербезопасности<br/>
-                        для успешного завтра.<br/>
-                    </div>
-                    <Button className={styles.btn} type="primary" onClick={() => navigate('/registration')}>
-                        НАЧАТЬ
-                    </Button>
-                    <Button className={styles.btn} type="primary" onClick={() => navigate('/login')}>
-                        У меня уже есть аккаунт!
-                    </Button>
+                <div className={styles.progress_text}> 
+                    Финансовые <br/>нарушения
                 </div>
             </div>
+            <div className={styles.progress_item}>
+                <div className={styles.progress1}>
+                <Progress type="dashboard" percent={0} />
+                </div>
+                <div className={styles.progress_text}> 
+                    Защита <br/>персональных данных
+                </div>
+            </div>
+            <div className={styles.progress_item}>
+                <div className={styles.progress1}>
+                <Progress type="dashboard" percent={75} />
+                </div>
+                <div className={styles.progress_text}> 
+                    Защита личных <br/>цифровых ресурсов
+                </div>
+            </div>
+            <div className={styles.progress_item}>
+                <div className={styles.progress1}>
+                <Progress type="dashboard" percent={100} />
+                </div>
+                <div className={styles.progress_text}> 
+                    Правила работы <br/> в сети
+                </div>
+            </div>
+            </div>
+        <div className={styles.activity}>
+            <div className={styles.act_text}>
+            Моя активность
+            </div>
+            <div className={styles.main_act}>
+                <img src="https://i.ibb.co/wSBbmYC/2023-12-09-163211586.png" alt="2023-12-09-163211586"/>
+            </div>
         </div>
+        </div>
+        
     )
 }
 
