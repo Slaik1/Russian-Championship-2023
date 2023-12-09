@@ -34,7 +34,7 @@
         display: flex;
     
         svg::before{
-          margin: 28px;
+          margin: 10px;
         }
       }
     }
@@ -70,24 +70,40 @@
     display: flex;
 
     .achieve{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       margin-top: 46px;
       margin-left: 20px;
-      display: flex;
       color: #28377B;
-      //border: #28377B 2px solid;
+      border: #28377B 3px solid;
+      width: 325px;
+      height: 568px;
+      border-radius: 16px;
 
       .ach_text{
-        
+        display: flex;
+        margin-top: 30px;
+        text-align: center;
+        font-size: 29px;
+        font-weight: 700;
+        border-bottom: #28377B 3px solid;  
+        margin-bottom: 40px;   
+      }
+
+      .row_img{
+        display: flex;
+        flex-direction: row;
       }
 
       img{
-        width: 325px;
-        height: 568px;
+        margin: 15px;
+        width: 70px;
+        height: 70px;
       }
     }
   }
-
-  
   
 }
 

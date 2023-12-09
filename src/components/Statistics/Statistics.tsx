@@ -12,7 +12,7 @@ const Statistics: FC = () => {
                 <div className={styles.progress}>
                 <div className={styles.progress_item}>
                     <div className={styles.progress1}>
-                    <Progress type="dashboard" percent={35} />
+                    <Progress type="dashboard" percent={0} />
                     </div>
                     <div className={styles.progress_text}> 
                         Финансовые <br/>нарушения
@@ -28,7 +28,7 @@ const Statistics: FC = () => {
                 </div>
                 <div className={styles.progress_item}>
                     <div className={styles.progress1}>
-                    <Progress type="dashboard" percent={75} />
+                    <Progress type="dashboard" percent={0} />
                     </div>
                     <div className={styles.progress_text}> 
                         Защита личных <br/>цифровых ресурсов
@@ -36,7 +36,7 @@ const Statistics: FC = () => {
                 </div>
                 <div className={styles.progress_item}>
                     <div className={styles.progress1}>
-                    <Progress type="dashboard" percent={100} />
+                    <Progress type="dashboard" percent={0} />
                     </div>
                     <div className={styles.progress_text}> 
                         Правила работы <br/> в сети
@@ -48,13 +48,38 @@ const Statistics: FC = () => {
                     Моя активность
                     </div>
                     <div className={styles.main_act}>
-                        <img src="https://i.ibb.co/wSBbmYC/2023-12-09-163211586.png" alt="2023-12-09-163211586"/>
+                        <img src="https://i.ibb.co/7vS6Zs5/2023-12-09-210134072.png" alt="2023-12-09-210134072"/>
                     </div>
                 </div>
             </div>
             <div className={styles.right_panel}>
                 <div className={styles.achieve}>
-                    <img src="https://i.ibb.co/qk6V8ZD/2023-12-09-174241766.png" alt="2023-12-09-174241766"/>
+                    <div className={styles.ach_text}>
+                        Витрина достижений 
+                    </div>
+                    <div className={styles.row_img}>
+                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                    </div>
+                    <div className={styles.row_img}>
+                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                    </div>
+                    <div className={styles.row_img}>
+                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                    </div>
+                    <div className={styles.row_img}>
+                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                    </div>
+                    
+
+                    
                 </div>
             </div>
         
