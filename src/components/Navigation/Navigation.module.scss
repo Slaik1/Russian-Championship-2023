@@ -32,6 +32,14 @@
 	.wrapper {
 		display: flex;
 
+		.statistic {
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 700;
+			text-transform: capitalize;
+			margin-right: 30px;
+		}
+
 		.settings {
 			font-family: 'Press Start 2P', sans-serif !important;
 			cursor: pointer;

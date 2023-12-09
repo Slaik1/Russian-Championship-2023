@@ -1,4 +1,4 @@
-import {FC, useState} from 'react';
+import React, {FC, useState} from 'react';
 import {Modal} from 'antd';
 
 import styles from './Navigation.module.scss'
