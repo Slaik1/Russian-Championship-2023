@@ -13,6 +13,7 @@ import Registration from "../Registration/Registration";
 
 import {userStore} from "../../stores/userStore/userStore";
 import styles from "./App.module.scss"
+import StartPage from "../../pages/StartPage/StartPage";
 
 
 const App: FC = () => {
@@ -42,11 +43,10 @@ const App: FC = () => {
 
             } else {
                 userStore.setIsToken(false)
-                navigate("/login");
             }
         } catch (e) {
             userStore.setIsToken(false)
-            navigate("/login");
+            navigate("/");
         } finally {
             setIsAppReady(true)
         }
@@ -68,6 +68,7 @@ const App: FC = () => {
         return (
             <div className="App">
                 <Routes>
+                    <Route path="/" element={<StartPage/>}/>
                     <Route path="/login" element={<LoginPage/>}/>
                     <Route path="/registration" element={<Registration/>}/>
                     <Route path="*" element={<NotFoundPage/>}/>
@@ -79,10 +80,8 @@ const App: FC = () => {
     return (
         <div className="App">
             <Routes>
-                <Route path="/" element={
-                    <HomePage/>
-                }
-                />
+                <Route path="/welcome" element={<StartPage/>}/>
+                <Route path="/" element={<HomePage/>}/>
                 <Route path="*" element={<HomePage/>}/>
             </Routes>
         </div>
