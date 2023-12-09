@@ -1,41 +1,80 @@
 import {Spin} from "antd";
 import {observer} from "mobx-react-lite";
 import {FC, useEffect, useState} from "react";
-import {Routes, Route} from "react-router-dom";
+import {Routes, Route, useNavigate} from "react-router-dom";
 
 import '../../accets/styles/index.scss';
+import AuthService from "../../api/AuthService";
 import HomePage from "../../pages/HomePage/HomePage";
 import LoginPage from "../../pages/LoginPage/LoginPage";
 import NotFoundPage from "../../pages/NotFoundPage/NotFoundPage";
 import 'antd/dist/reset.css';
-import Navigation from "../Navigation/Navigation";
 import Registration from "../Registration/Registration";
 
+import {userStore} from "../../stores/userStore/userStore";
 import styles from "./App.module.scss"
-import AsidePanel from "../AsidePanel/AsidePanel";
 
 
 const App: FC = () => {
-    // const { isAuth, isAppReady } = rootStore.userStore;
-    // const { initLoaders } = rootStore.filmsStore;
-    const isAppReady = true
-    const isAuth = true
+    const [isAppReady, setIsAppReady] = useState(false)
+    const authService = new AuthService()
+    const navigate = useNavigate();
 
-    //useAuthorization(isAuth)
+    const checkAuth = async () => {
+        setIsAppReady(false)
+
+        if (userStore.isToken){
+            setIsAppReady(true)
+
+            return
+        }
+
+        let isTokenExists
+
+        try {
+            const token = userStore.getToken()
+
+            if (token) {
+                isTokenExists = await authService.user(String(token))
+
+                if (isTokenExists !== null)
+                    userStore.setIsToken(true)
+
+            } else {
+                userStore.setIsToken(false)
+                navigate("/login");
+            }
+        } catch (e) {
+            userStore.setIsToken(false)
+            navigate("/login");
+        } finally {
+            setIsAppReady(true)
+        }
+    }
 
     useEffect(() => {
-        if (!isAuth || !isAppReady) return;
-
-    }, [isAuth, isAppReady])
+        checkAuth()
+    }, [userStore.isToken])
 
     if (!isAppReady) return (
         <div>
-            {/*<Background />*/}
             <div className={styles.spin_wrapper}>
                 <Spin size='large'/>
             </div>
         </div>
     )
+
+    if (!userStore.isToken) {
+        return (
+            <div className="App">
+                <Routes>
+                    <Route path="/login" element={<LoginPage/>}/>
+                    <Route path="/registration" element={<Registration/>}/>
+                    <Route path="*" element={<NotFoundPage/>}/>
+                </Routes>
+            </div>
+        );
+    }
 
     return (
         <div className="App">
@@ -44,9 +83,7 @@ const App: FC = () => {
                     <HomePage/>
                 }
                 />
-                <Route path="/login" element={<LoginPage/>}/>
-                <Route path="/registration" element={<Registration/>}/>
-                <Route path="*" element={<NotFoundPage/>}/>
+                <Route path="*" element={<HomePage/>}/>
             </Routes>
         </div>
     );

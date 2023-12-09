@@ -1,21 +1,22 @@
 import { Button, Form, Input, notification } from 'antd';
 import { FC, useState } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
-
-//import useAuth from '../../hooks/useAuth';
+import { useCookies } from 'react-cookie';
 
 
 
 import styles from "./Login.module.scss"
 import AuthService from "../../api/AuthService";
+import {userStore} from "../../stores/userStore/userStore";
+import {observer} from "mobx-react-lite";
 
-const Login: FC = () => {
-    //const {checkAuth, signin} = useAuth();
+const Login= () => {
 
     const [email, setLogin] = useState('');
     const [password, setPassword] = useState('');
     const [isNotValid, setIsNotValid] = useState(false);
     const [isAuthPending, setIsAuthPending] = useState(false);
+    const [cookies, setCookie] = useCookies(['user']);
     const navigate = useNavigate()
     const authService = new AuthService()
 
@@ -36,29 +37,16 @@ const Login: FC = () => {
 
     const handleLogin = async () => {
         try {
-            setIsAuthPending(true)
-
-            //await signin(login, password)
-
-            //await checkAuth();
-
             const res = await authService.login(email, password)
 
             console.log(res)
-            notification.success({
-                message: "Вы успешно вошли в аккаунт"
-            });
-
-            setIsAuthPending(false);
-            setIsNotValid(false);
-
-            navigate('/')
-
-        } catch (e) {
+            userStore.setToken(res.tokens.access)
+            userStore.setIsToken(true)
+            navigate("/");
+        } catch (e){
             setIsNotValid(true)
-        } finally {
-            setIsAuthPending(false)
         }
+
     }
 
     const helpDiv = (): JSX.Element => {
@@ -114,4 +102,4 @@ const Login: FC = () => {
     )
 }
 
-export default Login
+export default observer(Login)
