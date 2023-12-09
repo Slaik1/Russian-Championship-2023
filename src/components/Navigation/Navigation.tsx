@@ -21,7 +21,7 @@ const Navigation: FC = () => {
         <div className={styles.navigation}>
             <div className={styles.wrapper}>
                 <img src="https://i.ibb.co/XzHDSTS/image.png" alt="image"/>
-                <Link to='/'>
+                <Link className={styles.logoLink} to='/'>
                     кибертест
                 </Link>
             </div>
