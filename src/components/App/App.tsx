@@ -15,6 +15,7 @@ import {userStore} from "../../stores/userStore/userStore";
 import styles from "./App.module.scss"
 import StartPage from "../../pages/StartPage/StartPage";
 import BuyPage from "../../pages/BuyPage/BuyPage";
+import StatisticsPage from "../../pages/StatisticsPage/StatisticsPage";
 
 
 const App: FC = () => {
@@ -84,6 +85,7 @@ const App: FC = () => {
                 <Route path="/welcome" element={<StartPage/>}/>
                 <Route path="/" element={<HomePage/>}/>
                 <Route path="/buy" element={<BuyPage/>}/>
+                <Route path="/statistics" element={<StatisticsPage/>}/>
                 <Route path="*" element={<HomePage/>}/>
             </Routes>
         </div>
