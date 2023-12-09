@@ -1,4 +1,4 @@
-import {FC, useState} from 'react';
+import React, {FC, useState} from 'react';
 import {Modal} from 'antd';
 
 import styles from './Navigation.module.scss'
@@ -26,6 +26,9 @@ const Navigation: FC = () => {
                 </Link>
             </div>
             <div className={styles.wrapper}>
+                <Link className={styles.statistic} to='/' >
+                    Статистика
+                </Link>
                 <div className={styles.settings} onClick={(prev) => setIsSettings(true)}>
                 Настройки
                 </div>
