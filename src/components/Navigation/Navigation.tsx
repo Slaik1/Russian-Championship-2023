@@ -6,6 +6,9 @@ import Settings from "../Settings/Settings";
 import {Link, useNavigate} from "react-router-dom";
 
 import {userStore} from "../../stores/userStore/userStore";
+import {lessonStore} from "../../stores/lessonStore/lessonsSrote";
+import {testStore} from "../../stores/testsStore/testStore";
+
 
 const Navigation: FC = () => {
     const [isSettings, setIsSettings] = useState(false)
@@ -17,11 +20,16 @@ const Navigation: FC = () => {
         navigate('/')
     }
 
+    const openCourseList = () => {
+        lessonStore.setShowLesson(false)
+        testStore.setIsTest(false)
+    }
+
     return (
         <div className={styles.navigation}>
             <div className={styles.wrapper}>
                 <img src="https://i.ibb.co/XzHDSTS/image.png" alt="image"/>
-                <Link className={styles.logoLink} to='/'>
+                <Link className={styles.logoLink} to='/' onClick={(prev) =>openCourseList()}>
                     кибертест
                 </Link>
             </div>

@@ -3,8 +3,8 @@ import {AppstoreOutlined} from '@ant-design/icons';
 import {Menu, type MenuProps} from "antd";
 import styles from './AsidePanel.module.scss';
 import CourseService from "../../api/CourseService";
-import {Link} from "react-router-dom";
-import {lessonStore} from "../../stores/lessonStore/lessonsSrote";
+import {Link, useNavigate} from "react-router-dom";
+import { lessonStore } from "../../stores/lessonStore/lessonsSrote";
 import { testStore } from '../../stores/testsStore/testStore';
 
 type MenuItem = Required<MenuProps>['items'][number];
@@ -13,6 +13,7 @@ type MenuItem = Required<MenuProps>['items'][number];
 const AsidePanel = () => {
 
     const [tests, setTests] = useState([])
+    const navigate = useNavigate()
     const courseService = new CourseService()
 
     const getTests = async () => {
@@ -24,10 +25,12 @@ const AsidePanel = () => {
     }
 
     const openLesson = () => {
+        testStore.setIsTest(false)
         lessonStore.setShowLesson(true)
     }
 
     const openTest = () => {
+        lessonStore.setShowLesson(false)
         testStore.setIsTest(true)
     }
 
