@@ -5,110 +5,136 @@
   align-items: center;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  background: var(--additional-color);
+
+  img {
+    width: 50px;
+    height: 50px;
+    margin: 6px;
+    margin-left: 30px;
+  }
+
+  a {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-left: 10px;
+    text-decoration: none;
+    color: var(--font-color);
+  }
+}
+
 .contentWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-.content {
-  display: flex;
-  justify-content: space-between;
-  width: 1300px;
-  margin-top: 225px;
-
-  .image {
-    width: 384px;
-    height: 384px;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .buttonWrapper {
+  .content {
     display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    width: 700px;
+    justify-content: space-between;
+    width: 1300px;
+    margin-top: 225px;
 
-    .slogan {
-      color: var(--additional-color);;
-      text-align: center;
-      font-size: 32px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      margin-top: 30px;
-      margin-bottom: 30px;
-      width: 100%;
-    }
+    .image {
+      width: 384px;
+      height: 384px;
 
-    .btn {
-      display: block;
-      margin: auto;
-      width: 400px;
-      height: 50px;
-      margin-top: 25px;
-      color: var(--font-color);
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      border-radius: 15px;
-      background: var(--additional-color);
-
-      &:last-child {
-        color: var(--additional-color);
-        background: var(--font-color);
+      img {
+        width: 100%;
+        height: 100%;
       }
     }
-  }
-
-  .textWrapper {
-    display: flex;
-    flex-direction: column;
-    width: 800px;
-    height: 100%;
-    margin-top: 50px;
-
-    .title {
-      color: var(--additional-color);
-      text-align: center;
-      font-size: 40px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      margin-bottom: 50px;
-      width: 100%;
-    }
-
-    p {
-      color: var(--additional-color);
-      text-align: center;
-      font-size: 28px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      width: 100%;
-    }
-  }
-
-  &:last-child {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 700px;
-    margin-bottom: 100px;
 
     .buttonWrapper {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      width: 700px;
+
+      .slogan {
+        color: var(--additional-color);;
+        text-align: center;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+      }
 
       .btn {
+        display: block;
+        margin: auto;
+        width: 400px;
+        height: 50px;
+        margin-top: 25px;
         color: var(--font-color);
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border-radius: 15px;
         background: var(--additional-color);
+
+        &:last-child {
+          color: var(--additional-color);
+          background: var(--font-color);
+        }
+      }
+    }
+
+    .textWrapper {
+      display: flex;
+      flex-direction: column;
+      width: 800px;
+      height: 100%;
+      margin-top: 50px;
+
+      .title {
+        color: var(--additional-color);
+        text-align: center;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 50px;
+        width: 100%;
+      }
+
+      p {
+        color: var(--additional-color);
+        text-align: center;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 100%;
+      }
+    }
+
+    &:last-child {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 700px;
+      margin-bottom: 100px;
+
+      .buttonWrapper {
+
+        .btn {
+          color: var(--font-color);
+          background: var(--additional-color);
+        }
       }
     }
   }

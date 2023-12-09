@@ -1,14 +1,21 @@
-import { Button, Form, Input, notification } from 'antd';
+import {Button, Form, Input, Modal, notification} from 'antd';
 import React, { FC, useState } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import styles from './Start.module.scss'
 import Footer from "../Footer/Footer";
+import Settings from "../Settings/Settings";
 
 const Start: FC = () => {
     const navigate = useNavigate()
 
     return (
         <div className={styles.start}>
+            <div className={styles.logo}>
+                <img src="https://i.ibb.co/XzHDSTS/image.png" alt="image"/>
+                <Link to='/'>
+                    кибертест
+                </Link>
+            </div>
             <div className={styles.contentWrapper}>
                 <div className={styles.content}>
                     <div className={styles.image}>

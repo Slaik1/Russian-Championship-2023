@@ -19,12 +19,15 @@ const Navigation: FC = () => {
 
     return (
         <div className={styles.navigation}>
-            <Link to='/'>
-                кибертест
-            </Link>
+            <div className={styles.wrapper}>
+                <img src="https://i.ibb.co/XzHDSTS/image.png" alt="image"/>
+                <Link to='/'>
+                    кибертест
+                </Link>
+            </div>
             <div className={styles.wrapper}>
                 <div className={styles.settings} onClick={(prev) => setIsSettings(true)}>
-                    Настройки
+                Настройки
                 </div>
                 <div className={styles.settings} onClick={(prev) => logoutHandler()}>
                     Выйти
