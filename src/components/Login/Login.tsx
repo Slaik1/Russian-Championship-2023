@@ -6,7 +6,6 @@ import styles from "./Login.module.scss"
 import AuthService from "../../api/AuthService";
 import {userStore} from "../../stores/userStore/userStore";
 import {observer} from "mobx-react-lite";
-import {AGE_RULES, DEBOUNCE_DELAY} from "../Registration/constants";
 
 const Login= () => {
 

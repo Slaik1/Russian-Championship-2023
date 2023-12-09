@@ -1,21 +1,21 @@
 import {makeAutoObservable} from 'mobx'
 
 class TestStore {
-    isToken: boolean
+    isTest:boolean
     testDada:[]
 
     constructor() {
-        this.isToken = false
         this.testDada = []
+        this.isTest = false
         makeAutoObservable(this)
-    }
-
-    setIsChild = (isToken: boolean) => {
-        this.isToken = isToken
     }
 
     setTestDada = (testData: []) => {
         this.testDada = testData
+    }
+
+    setIsTest = (isTest: boolean) => {
+        this.isTest = isTest
     }
 }
 

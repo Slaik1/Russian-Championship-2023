@@ -10,6 +10,9 @@ import CourseList from "../../components/CourseList/CourseList";
 
 import Lesson from "../../components/Lesson/Lesson";
 import {lessonStore} from "../../stores/lessonStore/lessonsSrote";
+import {testStore} from "../../stores/testsStore/testStore";
+import Test from "../../components/Test/Test";
+import Start from "../../components/Start/Start";
 
 const HomePage: FC = () => {
 
@@ -21,11 +24,13 @@ const HomePage: FC = () => {
                 <Layout.Content>
                     <div className={styles.container}>
                         {
-                            lessonStore.showLesson
-                                ?
-                                <Lesson/>
-                                :
-                                <CourseList/>
+                            lessonStore.showLesson && !testStore.isTest && <Lesson/>
+                        }
+                        {
+                            !lessonStore.showLesson && testStore.isTest && <Test/>
+                        }
+                        {
+                            !lessonStore.showLesson && !testStore.isTest && <CourseList/>
                         }
                     </div>
                 </Layout.Content>

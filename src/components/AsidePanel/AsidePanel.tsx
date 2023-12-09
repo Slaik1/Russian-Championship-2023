@@ -5,6 +5,7 @@ import styles from './AsidePanel.module.scss';
 import CourseService from "../../api/CourseService";
 import {Link} from "react-router-dom";
 import {lessonStore} from "../../stores/lessonStore/lessonsSrote";
+import { testStore } from '../../stores/testsStore/testStore';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -24,6 +25,10 @@ const AsidePanel = () => {
 
     const openLesson = () => {
         lessonStore.setShowLesson(true)
+    }
+
+    const openTest = () => {
+        testStore.setIsTest(true)
     }
 
     useEffect( () => {
@@ -50,7 +55,7 @@ const AsidePanel = () => {
                                 {
                                     key: index + 1,
                                     label: 'Тесты',
-                                    children: [{key: index + 2, label: 'Тест 1'}, {key: '6', label: 'Тест 2'}]
+                                    children: [{key: index + 2, label: 'Тест 1'}, {key: '6', label: 'Тест 2', onClick: openTest}]
                                 },
                                 {
                                     key: index + 3,
