@@ -14,23 +14,23 @@ const Test = () => {
     const items: CollapseProps['items'] = [
         {
           key: '1',
-          label: 'Информационные системы, психологическое состояние пользователей',
-          children: <p>Да</p>,
+          label: 'КиберБезопасность2023',
+          children: <p>Правильно! <br/>Этот пароль сочетает в себе буквы, цифры, и он довольно длинный, что делает его сложным для угадывания.</p>,
         },
         {
           key: '2',
-          label: 'Компьютерные сети, базы данных',
-          children: <p>Нет</p>,
+          label: 'пароль',
+          children: <p>Это слабый пароль. Так как используются только буквы</p>,
         },
         {
           key: '3',
-          label: 'Бизнес-ориентированные, коммерческие системы',
-          children: <p>Нет</p>,
+          label: 'джерри1',
+          children: <p>Это слабый пароль. Хороший паоль должен быть длиной хотябы 8 символов</p>,
         },
         {
             key: '4',
-            label: 'Бизнес-ориентированные, коммерческие системы',
-            children: <p>Нет</p>,
+            label: '123456',
+            children: <p>Это слабый пароль. Так как используются только цифры</p>,
           },
       ];
 
@@ -40,7 +40,7 @@ const Test = () => {
             <div className={styles.title}>Тест 1</div>
             <div className={styles.contentWrapper}>
                 <div className={styles.content}>
-                    <div className={styles.title}>Основные объекты информационной безопасности:</div>
+                    <div className={styles.title}>Какое слово считается хорошим паролем?</div>
 
                     <Collapse items={items} defaultActiveKey={[]} />;
                     <div className={styles.buttonWrapper}>
