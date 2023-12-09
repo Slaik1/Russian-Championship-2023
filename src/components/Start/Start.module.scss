@@ -3,7 +3,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  }
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .content {
   display: flex;
@@ -87,6 +94,22 @@
       font-weight: 700;
       line-height: normal;
       width: 100%;
+    }
+  }
+
+  &:last-child {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    margin-bottom: 100px;
+
+    .buttonWrapper {
+
+      .btn {
+        color: var(--font-color);
+        background: var(--additional-color);
+      }
     }
   }
 }
