@@ -71,7 +71,7 @@ const App: FC = () => {
                     <Route path="/" element={<StartPage/>}/>
                     <Route path="/login" element={<LoginPage/>}/>
                     <Route path="/registration" element={<Registration/>}/>
-                    <Route path="*" element={<NotFoundPage/>}/>
+                    <Route path="*" element={<StartPage/>}/>
                 </Routes>
             </div>
         );
