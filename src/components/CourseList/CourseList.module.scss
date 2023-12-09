@@ -9,3 +9,27 @@
     height: 290px;
   }
 }
+
+.cardWrapper {
+
+  img {
+    margin-bottom: 30px;
+  }
+
+  .themes {
+    position: relative;
+    margin-left: 20px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: -20px;
+      width: 7px;
+      height: 7px;
+      background: #2C2C2C;
+      border-radius: 5px;
+
+    }
+  }
+}

@@ -6,12 +6,19 @@ import CourseService from "../../api/CourseService";
 import {useNavigate} from "react-router-dom";
 import {BASE_URL} from "../../constants/global";
 
+interface Course {
+    title: string;
+    about: string;
+    image: string;
+    price: number;
+    themes:[];
+}
+
 
 const CourseList = () => {
 
     const [isModal, setIsModal] = useState(false)
-    const [isBuyModal, setBuyIsModal] = useState(false)
-    const [cursesData, setCursesData] = useState([])
+    const [cursesData, setCursesData] = useState<Course[]>([])
     const [courseId, setCourseId] = useState(-1)
     const courseService = new CourseService()
     const navigate = useNavigate()
@@ -33,10 +40,29 @@ const CourseList = () => {
         setCourseId(id)
     }
 
+    const getButtons = () => {
+        const arr =
+            [
+                <Button key="cansel" onClick={() => setIsModal(false)}>
+                    Отмена
+                </Button>,
+                <Button key="submit" type="primary" onClick={buyHandler}>
+                    Купить
+                </Button>,
+            ]
+
+        if (Number(cursesData[courseId].price) === 0)
+            arr.splice(1,1)
+
+        return arr
+    }
+
     useEffect(() => {
         getCurses()
     }, []);
 
+
+    // @ts-ignore
     return (
         <div className={styles.wrapper}>
 
@@ -59,21 +85,29 @@ const CourseList = () => {
             {
                 isModal &&
                 <Modal
-                    title="Курс Этические взломчики"
+                    title={cursesData[courseId].title}
                     centered
                     open={isModal}
                     onOk={() => setIsModal(false)}
                     onCancel={() => setIsModal(false)}
-                    footer={[
-                        <Button key="cansel" onClick={() => setIsModal(false)}>
-                            Отмена
-                        </Button>,
-                        <Button key="submit" type="primary" onClick={buyHandler}>
-                            Купить
-                        </Button>,
-                    ]}
+                    footer={() => getButtons()}
                 >
-
+                    {
+                        cursesData ?
+                            <div className={styles.cardWrapper}>
+                                <img src={BASE_URL + cursesData[courseId].image} alt=""/>
+                                <p>{cursesData[courseId].about}</p>
+                                <p>Темы курса</p>
+                                {cursesData[courseId].themes.map((el, i) =>
+                                    <p className={styles.themes} key={i}>{el}</p>
+                                )}
+                                {Number(cursesData[courseId].price) !== 0 &&
+                                    <p>Цена: {cursesData[courseId].price} руб.</p>
+                                }
+                            </div>
+                            :
+                            ''
+                    }
                 </Modal>
             }
         </div>

@@ -17,7 +17,6 @@ const Login= () => {
     const [password, setPassword] = useState('');
     const [isNotValid, setIsNotValid] = useState(false);
     const [isAuthPending, setIsAuthPending] = useState(false);
-    const [cookies, setCookie] = useCookies(['user']);
     const navigate = useNavigate()
     const authService = new AuthService()
 

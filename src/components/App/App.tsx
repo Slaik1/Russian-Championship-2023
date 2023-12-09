@@ -14,6 +14,7 @@ import Registration from "../Registration/Registration";
 import {userStore} from "../../stores/userStore/userStore";
 import styles from "./App.module.scss"
 import StartPage from "../../pages/StartPage/StartPage";
+import BuyPage from "../../pages/BuyPage/BuyPage";
 
 
 const App: FC = () => {
@@ -82,6 +83,7 @@ const App: FC = () => {
             <Routes>
                 <Route path="/welcome" element={<StartPage/>}/>
                 <Route path="/" element={<HomePage/>}/>
+                <Route path="/buy" element={<BuyPage/>}/>
                 <Route path="*" element={<HomePage/>}/>
             </Routes>
         </div>
