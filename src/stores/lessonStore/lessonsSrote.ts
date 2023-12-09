@@ -14,7 +14,7 @@ class LessonStore {
     this.id = id
   }
 
-  setShowCurse = (isLesson: boolean) => {
+  setShowLesson = (isLesson: boolean) => {
     this.showLesson = isLesson
   }
 }
