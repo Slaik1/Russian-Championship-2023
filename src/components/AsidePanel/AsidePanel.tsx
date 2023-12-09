@@ -55,7 +55,7 @@ const AsidePanel = () => {
                                 {
                                     key: index + 3,
                                     label: 'Уроки',
-                                    children: [{key: index + 4, label: 'Урок 1'}, {key: index + 5, label: 'Урок 2'}]
+                                    children: [{key: index + 4, label: 'Урок 1'}, {key: index + 5, label: 'Урок 2', onClick: openLesson}]
                                 },
                             ],
                         }
@@ -69,7 +69,7 @@ const AsidePanel = () => {
     }
 
     return (
-        <div className={styles.wrapper} onClick={openLesson}>
+        <div className={styles.wrapper} >
             <Menu
                 style={{height: '100%'}}
                 defaultOpenKeys={['sub1']}

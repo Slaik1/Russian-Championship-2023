@@ -6,10 +6,21 @@
   .card {
     margin: 10px;
     width: 300px;
+    height: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
   }
 }
 
 .cardWrapper {
+
+  .about {
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 5px;
+    text-overflow: ellipsis;
+  }
 
   img {
     margin-bottom: 30px;
