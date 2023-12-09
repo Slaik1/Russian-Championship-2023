@@ -9,13 +9,13 @@ import HomePage from "../../pages/HomePage/HomePage";
 import LoginPage from "../../pages/LoginPage/LoginPage";
 import NotFoundPage from "../../pages/NotFoundPage/NotFoundPage";
 import 'antd/dist/reset.css';
-import Registration from "../Registration/Registration";
 
 import {userStore} from "../../stores/userStore/userStore";
 import styles from "./App.module.scss"
 import StartPage from "../../pages/StartPage/StartPage";
 import BuyPage from "../../pages/BuyPage/BuyPage";
 import StatisticsPage from "../../pages/StatisticsPage/StatisticsPage";
+import RegistrationPage from "../../pages/RegistrationPage/RegistrationPage";
 
 
 const App: FC = () => {
@@ -72,7 +72,7 @@ const App: FC = () => {
                 <Routes>
                     <Route path="/" element={<StartPage/>}/>
                     <Route path="/login" element={<LoginPage/>}/>
-                    <Route path="/registration" element={<Registration/>}/>
+                    <Route path="/registration" element={<RegistrationPage/>}/>
                     <Route path="*" element={<StartPage/>}/>
                 </Routes>
             </div>
