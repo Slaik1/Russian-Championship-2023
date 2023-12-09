@@ -1,12 +1,12 @@
 import { FC } from 'react';
 
-import Statistics from "../../components/Statistics/Statistics";
+import Lesson from "../../components/Lesson/Lesson";
 import {Layout} from "antd";
 import Navigation from "../../components/Navigation/Navigation";
 import AsidePanel from "../../components/AsidePanel/AsidePanel";
-import styles from "../StatisticsPage/StatisticsPage.module.scss";
+import styles from "../LessonPage/LessonPage.module.scss";
 
-const StatisticsPage:FC = () => {
+const LessonPage:FC = () => {
     return (
         <Layout>
             <Layout.Header style={{padding: '0'}}><Navigation/></Layout.Header>
@@ -14,7 +14,7 @@ const StatisticsPage:FC = () => {
                 <Layout.Sider><AsidePanel/></Layout.Sider>
                 <Layout.Content>
                     <div className={styles.container}>
-                        <Statistics/>
+                        <Lesson/>
                     </div>
                 </Layout.Content>
             </Layout>
@@ -22,4 +22,4 @@ const StatisticsPage:FC = () => {
     );
 };
 
-export default StatisticsPage;
+export default LessonPage;
