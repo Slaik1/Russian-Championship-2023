@@ -5,6 +5,8 @@ import styles from "./CourseList.module.scss"
 import CourseService from "../../api/CourseService";
 import {useNavigate} from "react-router-dom";
 import {BASE_URL} from "../../constants/global";
+import {userStore} from "../../stores/userStore/userStore";
+import {observer} from "mobx-react-lite";
 
 interface Course {
     title: string;
@@ -51,7 +53,7 @@ const CourseList = () => {
                 </Button>,
             ]
 
-        if (Number(cursesData[courseId].price) === 0)
+        if (Number(cursesData[courseId].price) === 0 || userStore.isChild)
             arr.splice(1,1)
 
         return arr
@@ -114,4 +116,4 @@ const CourseList = () => {
     );
 };
 
-export default CourseList;
+export default observer(CourseList);

@@ -3,10 +3,12 @@ import {makeAutoObservable} from 'mobx'
 class UserStore {
   token: string | null
   isToken: boolean
+  isChild: boolean
 
   constructor() {
     this.token = localStorage.getItem('token')
     this.isToken = false
+    this.isChild = true
     makeAutoObservable(this)
   }
 
@@ -21,6 +23,10 @@ class UserStore {
 
   setIsToken = (isToken: boolean) => {
     this.isToken = isToken
+  }
+
+  setIsChild = (isChild: boolean) => {
+    this.isChild = isChild
   }
 
 }

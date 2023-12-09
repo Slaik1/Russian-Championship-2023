@@ -16,4 +16,14 @@ export default class CourseService {
 
         return response.data
     }
+
+    async getAllTasks(): Promise<any> {
+        const response = await axios.get(CURRENT_URL + '/', {
+            headers: {
+                Authorization: `Bearer ${userStore.token}`
+            }
+        })
+
+        return response.data
+    }
 }
