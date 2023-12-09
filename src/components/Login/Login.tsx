@@ -1,9 +1,6 @@
 import { Button, Form, Input, notification } from 'antd';
 import React, { FC, useState } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
-import { useCookies } from 'react-cookie';
-
-
 
 import styles from "./Login.module.scss"
 import AuthService from "../../api/AuthService";

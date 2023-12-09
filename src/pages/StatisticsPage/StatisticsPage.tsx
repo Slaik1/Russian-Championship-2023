@@ -5,7 +5,7 @@ import {Layout} from "antd";
 import Navigation from "../../components/Navigation/Navigation";
 import AsidePanel from "../../components/AsidePanel/AsidePanel";
 import styles from "../StatisticsPage/StatisticsPage.module.scss";
-import {curseStore} from "../../stores/curseStore/userStore";
+import {curseStore} from "../../stores/lessonStore/lessonsSrote";
 import Lesson from "../../components/Lesson/Lesson";
 import CourseList from "../../components/CourseList/CourseList";
 

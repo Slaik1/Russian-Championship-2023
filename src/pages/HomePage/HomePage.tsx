@@ -1,13 +1,15 @@
 import {FC} from 'react';
 
 import styles from './HomePage.module.scss'
-import CourseList from "../../components/CourseList/CourseList";
+
 import AsidePanel from "../../components/AsidePanel/AsidePanel";
 import {Layout} from "antd";
 import Navigation from "../../components/Navigation/Navigation";
 import {observer} from "mobx-react-lite";
-import {curseStore} from "../../stores/curseStore/userStore";
+import CourseList from "../../components/CourseList/CourseList";
+
 import Lesson from "../../components/Lesson/Lesson";
+import {lessonStore} from "../../stores/lessonStore/lessonsSrote";
 
 const HomePage: FC = () => {
 
@@ -19,7 +21,7 @@ const HomePage: FC = () => {
                 <Layout.Content>
                     <div className={styles.container}>
                         {
-                            curseStore.showCurse
+                            lessonStore.showLesson
                                 ?
                                 <Lesson/>
                                 :
