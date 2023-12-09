@@ -27,7 +27,7 @@ const Navigation: FC = () => {
             </div>
             <div className={styles.wrapper}>
                 <div className={styles.settings} onClick={(prev) => setIsSettings(true)}>
-                Настройки
+                    Настройки
                 </div>
                 <div className={styles.settings} onClick={(prev) => logoutHandler()}>
                     Выйти
