@@ -10,42 +10,42 @@ const Statistics: FC = () => {
         <div className={styles.statistics}>
             <div className={styles.left_panel}>
                 <div className={styles.progress}>
-                <div className={styles.progress_item}>
-                    <div className={styles.progress1}>
-                    <Progress type="dashboard" percent={0} />
+                    <div className={styles.progress_item}>
+                        <div className={styles.progress1}>
+                            <Progress type="dashboard" percent={0} />
+                        </div>
+                        <div className={styles.progress_text}> 
+                            Финансовые <br/>нарушения
+                        </div>
                     </div>
-                    <div className={styles.progress_text}> 
-                        Финансовые <br/>нарушения
+                    <div className={styles.progress_item}>
+                        <div className={styles.progress1}>
+                            <Progress type="dashboard" percent={0} />
+                        </div>
+                        <div className={styles.progress_text}> 
+                            Защита <br/>персональных данных
+                        </div>
                     </div>
-                </div>
-                <div className={styles.progress_item}>
-                    <div className={styles.progress1}>
-                    <Progress type="dashboard" percent={0} />
+                    <div className={styles.progress_item}>
+                        <div className={styles.progress1}>
+                            <Progress type="dashboard" percent={0} />
+                        </div>
+                        <div className={styles.progress_text}> 
+                            Защита личных <br/>цифровых ресурсов
+                        </div>
                     </div>
-                    <div className={styles.progress_text}> 
-                        Защита <br/>персональных данных
+                    <div className={styles.progress_item}>
+                        <div className={styles.progress1}>
+                            <Progress type="dashboard" percent={0} />
+                        </div>
+                        <div className={styles.progress_text}> 
+                            Правила работы <br/> в сети
+                        </div>
                     </div>
-                </div>
-                <div className={styles.progress_item}>
-                    <div className={styles.progress1}>
-                    <Progress type="dashboard" percent={0} />
-                    </div>
-                    <div className={styles.progress_text}> 
-                        Защита личных <br/>цифровых ресурсов
-                    </div>
-                </div>
-                <div className={styles.progress_item}>
-                    <div className={styles.progress1}>
-                    <Progress type="dashboard" percent={0} />
-                    </div>
-                    <div className={styles.progress_text}> 
-                        Правила работы <br/> в сети
-                    </div>
-                </div>
                 </div>
                 <div className={styles.activity}>
                     <div className={styles.act_text}>
-                    Моя активность
+                        Моя активность
                     </div>
                     <div className={styles.main_act}>
                         <img src="https://i.ibb.co/7vS6Zs5/2023-12-09-210134072.png" alt="2023-12-09-210134072"/>
@@ -58,33 +58,28 @@ const Statistics: FC = () => {
                         Витрина достижений 
                     </div>
                     <div className={styles.row_img}>
-                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
-                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
-                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                        <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                        <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                        <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
                     </div>
                     <div className={styles.row_img}>
-                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
-                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
-                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                        <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                        <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                        <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
                     </div>
                     <div className={styles.row_img}>
-                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
-                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
-                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                        <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                        <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                        <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
                     </div>
                     <div className={styles.row_img}>
-                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
-                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
-                    <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
-                    </div>
-                    
-
-                    
+                        <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                        <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                        <img src="https://i.ibb.co/gt2695K/2023-12-09-203745042.png" alt="2023-12-09-203745042"/>
+                    </div>  
                 </div>
-            </div>
-        
+            </div> 
         </div>
-        
     )
 }
 
