@@ -9,7 +9,7 @@ The idea is to make the client part of a web application to increase the level o
 
 ## Preview
 
-<img src="https://i.ibb.co/rZz3S1y/image.png" width="250" height="475">
+<img src="https://i.ibb.co/rZz3S1y/image.png" width="600" height="250">
 
 ## Tech
 - React 18.2
