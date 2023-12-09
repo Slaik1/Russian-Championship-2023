@@ -23,26 +23,31 @@ const Lesson = () => {
                         использовать эти данные, чтобы вас обмануть или даже навредить.</p>
                     <p> 3. Как беречь свои личные данные в интернете?</p>
                     <p> Как беречь свои личные данные в интернете?
-                        Не давайте данные незнакомым людям: Не разглашайте свои личные данные в чатах, играх или на сайтах. Злоумышленники могут выдаваться за друзей, но настоящие друзья не будут просить вас о таких данных.
-                        Пользуйтесь надежными паролями: Создавайте сложные пароли, которые трудно угадать. Не используйте личные данные, такие как
-                        Обратите внимание на настройки конфиденциальности: Многие приложения и сайты предлагают настройки конфиденциальности. Убедитесь, что вы настроили свои аккаунты так, чтобы только те, кого вы знаете, могли видеть вашу информацию.
-                        Сообщайте взрослым: Если что-то кажется вам странным или неприятным в интернете, всегда говорите об этом взрослым, т
-                        Защита личных данных – это как невидимый плащ, который помогает нам оставаться в безопасности в интернете. Помните, что ваши данные – это ваше личное сокровище, и берегите его как зеницу ока. И помните, всегда лучше поделиться своими волнениями с взрослыми, чем оставаться в одиночестве.</p>
+                        Не давайте данные незнакомым людям: Не разглашайте свои личные данные в чатах, играх или на
+                        сайтах. Злоумышленники могут выдаваться за друзей, но настоящие друзья не будут просить вас о
+                        таких данных.<br/>
+                        Пользуйтесь надежными паролями: Создавайте сложные пароли, которые трудно угадать. Не
+                        используйте личные данные, такие как день рождения.<br/>
+                        Обратите внимание на настройки конфиденциальности: Многие приложения и сайты предлагают
+                        настройки конфиденциальности. Убедитесь, что вы настроили свои аккаунты так, чтобы только те,
+                        кого вы знаете, могли видеть вашу информацию.<br/>
+                        Сообщайте взрослым: Если что-то кажется вам странным или неприятным в интернете, всегда говорите
+                        об этом взрослым.<br/>
+                        Защита личных данных – это как невидимый плащ, который помогает нам оставаться в безопасности в
+                        интернете. Помните, что ваши данные – это ваше личное сокровище, и берегите его как зеницу ока.
+                        И помните, всегда лучше поделиться своими волнениями с взрослыми, чем оставаться в
+                        одиночестве.</p>
                     <div className={styles.image}>
-                        <img src="https://i.ibb.co/hcR5pVB/image.png" alt="image"/>
+                        <img src="https://i.ibb.co/ctzR7BX/image.png" alt="image"/>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab, accusantium ad aspernatur
-                        assumenda aut dolorum, est eveniet facere hic illum magnam nihil officia qui vero. Aut dolor
-                        doloremque doloribus, in itaque labore laudantium quasi qui quidem quis repellat unde? A
-                        alias asperiores consequatur, corporis enim eveniet magnam maiores molestias, nostrum
-                        praesentium provident repellat similique tenetur ullam voluptas voluptatibus, voluptatum.
-                        Commodi deleniti eveniet exercitationem hic iste maxime nihil, perferendis porro, quaerat
-                        quas repudiandae sint, tenetur veniam voluptas voluptatem? Accusantium cumque eius est
-                        expedita quis repellat ut vero voluptates! Consequuntur dolores earum excepturi libero
-                        maiores mollitia officiis quam recusandae repudiandae velit.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ducimus enim explicabo
-                        ipsum labore nemo quia quo ratione sequi tenetur.</p>
-
+                    <div className={styles.buttonWrapper}>
+                        <Button className={styles.btn} type="primary" onClick={() => navigate('/registration')}>
+                            Вернуться
+                        </Button>
+                        <Button className={styles.btn} type="primary" onClick={() => navigate('/registration')}>
+                            Вперёд
+                        </Button>
+                    </div>
                 </div>
             </div>
         </div>
