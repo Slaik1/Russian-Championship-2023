@@ -1,62 +1,93 @@
 .statistics {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   justify-content: flex-start;
 
-  .progress{
+  .left_panel{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    justify-content: flex-start;
 
-    .progress_item{
-      margin-top: 45px;
+    .progress{
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      flex-direction: row;
       justify-content: center;
-    }
-
-    .progress_item:first-child{
-      margin-left: 35px;
+      align-items: flex-start;
+  
+      .progress_item{
+        margin-top: 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+  
+      .progress_item:first-child{
+        margin-left: 35px;
+      }
+    
+      .progress1{
+        display: flex;
+    
+        svg::before{
+          margin: 28px;
+        }
+      }
     }
   
-    .progress1{
-      display: flex;
+      .progress_text{
+        display: flex;
+        font-size: 18px;
+        color: #28377B;
+        margin-right: 34px;
+        margin-left: 34px;
+        text-align: center;
+      }
+    
   
-      svg::before{
-        margin: 28px;
+    .activity{
+      margin-top: 200px;
+  
+      .main_act{
+        margin-left: 65px;
+      }
+  
+      .act_text{
+        font-size: 30px;
+        color: #28377B;
+        margin-left: 64px;
+        font-weight: 700;
+        margin-bottom: 17px;
       }
     }
   }
 
-    .progress_text{
+  .right_panel{
+    display: flex;
+
+    .achieve{
+      margin-top: 46px;
+      margin-left: 115px;
       display: flex;
-      font-size: 18px;
       color: #28377B;
-      margin-right: 34px;
-      margin-left: 34px;
-      text-align: center;
-    }
-  
+      //border: #28377B 2px solid;
 
-  .activity{
-    margin-top: 200px;
+      .ach_text{
+        
+      }
 
-    .main_act{
-      margin-left: 65px;
-    }
-
-    .act_text{
-      font-size: 30px;
-      color: #28377B;
-      margin-left: 64px;
-      font-weight: 700;
-      margin-bottom: 17px;
+      img{
+        width: 425px;
+        height: 688px;
+      }
     }
   }
+
+  
   
 }
 
