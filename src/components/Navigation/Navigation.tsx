@@ -26,11 +26,11 @@ const Navigation: FC = () => {
                 </Link>
             </div>
             <div className={styles.wrapper}>
-                <Link className={styles.statistic} to='/' >
+                <Link className={styles.settings} to='/statistics'>
                     Статистика
                 </Link>
                 <div className={styles.settings} onClick={(prev) => setIsSettings(true)}>
-                Настройки
+                    Настройки
                 </div>
                 <div className={styles.settings} onClick={(prev) => logoutHandler()}>
                     Выйти
