@@ -62,7 +62,6 @@ const Login= () => {
             <Form
                 className={styles.form}
                 onFinish={handleLogin}
-                autoComplete="off"
                 layout="vertical"
                 onChange={(event) => handleFormChange(event)}
                 disabled={isAuthPending}
