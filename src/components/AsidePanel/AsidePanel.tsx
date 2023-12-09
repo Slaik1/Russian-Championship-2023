@@ -58,12 +58,12 @@ const AsidePanel = () => {
                                 {
                                     key: index + 1,
                                     label: 'Тесты',
-                                    children: [{key: index + 2, label: 'Тест 1'}, {key: '6', label: 'Тест 2', onClick: openTest}]
+                                    children: [{key: index + 2, label: 'Тест 1', onClick: openTest}, {key: '6', label: 'Тест 2', onClick: openTest}]
                                 },
                                 {
                                     key: index + 3,
                                     label: 'Уроки',
-                                    children: [{key: index + 4, label: 'Урок 1'}, {key: index + 5, label: 'Урок 2', onClick: openLesson}]
+                                    children: [{key: index + 4, label: 'Урок 1', onClick: openLesson}, {key: index + 5, label: 'Урок 2', onClick: openLesson}]
                                 },
                             ],
                         }
