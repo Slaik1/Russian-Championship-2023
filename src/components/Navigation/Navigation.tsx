@@ -14,7 +14,7 @@ const Navigation: FC = () => {
     const logoutHandler = () => {
         userStore.setIsToken(false)
         userStore.setToken('')
-        navigate('/login')
+        navigate('/')
     }
 
     return (
